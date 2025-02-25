@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'test';
+    src: url('/sillyneko/media/fonts/APRICOT_PORTABLE.woff2') format("woff2"), url('/sillyneko/media/fonts/APRICOT_PORTABLE.woff') format("woff");
+}
+
+@keyframes moveIt {
+    from {
+        background-position: 250px 250px;
+    }
+    to {
+        background-position: -250px -250px;
+    }
+}
+
+@keyframes levitate2 {
+    0% {
+        transform: translateY(10vw);
+    }
+    50% {
+        transform: translateY(8vw);
+    }
+    100% {
+        transform: translateY(10vw);
+    }
+}
+
+@keyframes levitate3 {
+    0% {
+        transform: rotate(-3.8deg) scale(1.2);
+    }
+    50% {
+        transform: rotate(-5deg) scale(0.95);
+    }
+    100% {
+        transform: rotate(-3.8deg) scale(1.2);
+    }
+}
+
+body {
+    background-image: url("/sillyneko/media/images/startbg.png");
+    background-size: 500px;
+    animation: moveIt 4s linear infinite;
+    padding: 0;
+    margin: 0;
+    font-size: 0.5625vw;
+    color: gray;
+    font-family: 'test', monospace;
+}
+
+#enterBox {
+    font-family: test, Monospace, monospace;
+    left: 36.5vw;
+    top: 23vw;
+    position: absolute;
+    width: 25vw;
+    height: 4vw;
+    font-size: 1.5vw;
+    padding: 1vw;
+    border-radius: 0.5vw;
+    border: solid 0.2vw rgba(40, 40, 40, 1);
+    background: rgba(40, 40, 40, 0.7);
+    color: gray;
+}
+
+#enterBox:hover {
+    z-index: 10;
+    border: solid 0.2vw rgba(36, 36, 36, 1);
+    background: rgba(37, 37, 37, 0.9);
+    color: darkgray;
+}
+
+#siteName {
+    color: darkgray;
+    position: absolute;
+    top: 9.9vw;
+    left: 18vw;
+    font-size: 2.6vw;
+    padding: 1vw;
+    z-index: 100;
+    transform: rotate(-10deg);
+    pointer-events: none;
+}
+
+#splashDiv {
+    position: absolute;
+    display: flex;
+    max-height: 11vw;
+    max-width: 23vw;
+    top: 15vw;
+    left: 20vw;
+    font-size: 0.75vw;
+    padding: 0;
+    z-index: 100;
+    animation: levitate3 3s ease-in-out infinite;
+    color: yellow;
+    pointer-events: none;
+}
+
+#disclaimer {
+    font-size: 1em;
+    right: 9vw;
+    width: 11vw;
+    height: 7.5vw;
+    position: absolute;
+    animation: levitate2 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+#disclaimer > img {
+    width: 3vw;
+    height: 1.5vw;
+    pointer-events: none;
+}
+
+a:link {
+    color: gray;
+    text-decoration: none;
+}
+
+a:visited {
+    color: gray;
+    text-decoration: none;
+}
